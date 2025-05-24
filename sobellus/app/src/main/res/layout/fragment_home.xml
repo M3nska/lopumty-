@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/studyground"
+    android:padding="16dp"
+    android:gravity="top"
+    tools:context=".HomeFragment">
+
+    <TextView
+        android:id="@+id/title_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Opiskelut"
+        android:textSize="28sp"
+        android:textColor="@color/main"
+        android:textStyle="bold"
+        android:layout_marginTop="70dp"
+        android:layout_marginBottom="16dp"
+        android:layout_gravity="center_horizontal"/>
+
+    <EditText
+        android:id="@+id/input_activity"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@android:drawable/editbox_background"
+        android:gravity="top|start"
+        android:hint="Mitä opiskellaan tai mitä tehtäviä tehdään?"
+        android:inputType="textMultiLine"
+        android:padding="12dp"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/input_subject"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="Mikä Aine?"
+        android:background="@android:drawable/editbox_background"
+        android:padding="12dp"
+        android:inputType="text"
+        android:textSize="16sp" />
+
+
+    <Button
+        android:id="@+id/button_submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="@color/main"
+        android:text="Ota ylös"
+        android:textColor="@android:color/white" />
+
+</LinearLayout>
