@@ -28,7 +28,7 @@ Rakenne
 
 Sovelluksessa on kolme pääfragmenttia:
 
-- HomeFragment(Etusivu): Muistiinpanojen lisäämiselle
+- HomeFragment(Etusivu): Muistiinpanojen lisäämiselle(img/1.jpg)
 - ViewFragment(Tietojenkatselu): Muistiinpanojen tarkasteluun
 - EditFragment(Tietojen tyhennys): Muistiinpajonen poistamiseen
 
