@@ -29,16 +29,17 @@ Sovellus on kehitetty Android Studiolla osana Projekti: Tekoäly/Mobiili - T42T1
 Sovelluksessa on kolme pääfragmenttia:
 
 - **HomeFragment(Etusivu)**  
-  - Käyttäjä kirjoittaa aiheen ja tehtävän, jotka tallennetaan paikalliseen Room-tietokantaan DAO:n kautta.  
+  - Käyttäjä kirjoittaa aineen ja tehtävän, jotka tallennetaan paikalliseen Room-tietokantaan DAO:n kautta.  
   - Tiedot syötetään ViewModelin kautta tietokantaan, ja kentät tyhjennetään automaattisesti syötön jälkeen.
+  - Virheellisestä syötöstä ilmoitetaan käyttäjälle ja tätäei lähetetä eteenpäin.
 
 - **ViewFragment(Tietojenkatselu)**  
   - Hakee kaikki tallennetut muistiinpanot ViewModelin kautta.
-  - Ryhmittelee ne `groupingBy`-toiminnolla aiheen mukaan ja näyttää jokaisen aiheen tehtävämäärän TextView-komponentissa.
+  - Ryhmittelee ne `groupingBy`-toiminnolla aiheen mukaan ja näyttää jokaisen aineen tehtävämäärän TextView-komponentissa.
 
 - **EditFragment(Tietojen tyhennys)**  
   - Näyttää listan kaikista merkinnöistä.
-  - Käyttäjä voi poistaa yksittäisen muistiinpanon (Delete-napilla) tai kaikki merkinnät kerralla (Uusipainikkeella), jolloin DAO suorittaa `deleteAll()`-toiminnon.
+  - Käyttäjä voi poistaa yksittäisen muistiinpanon koskemalla sitä tai kaikki merkinnät kerralla painikkeella, jolloin DAO suorittaa `deleteAll()`-toiminnon.
 
 ## Ominaisuudet
 
