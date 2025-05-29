@@ -28,7 +28,7 @@ Rakenne
 
 Sovelluksessa on kolme pääfragmenttia:
 
-- HomeFragment(Etusivu): Muistiinpanojen lisäämiselle(img/1.jpg)
+- HomeFragment(Etusivu): Muistiinpanojen lisäämiselle
 - ViewFragment(Tietojenkatselu): Muistiinpanojen tarkasteluun
 - EditFragment(Tietojen tyhennys): Muistiinpajonen poistamiseen
 
@@ -79,3 +79,5 @@ Tämä on toteutettu käyttäen groupinBy ja LiveData kotlinissa ja tämä saa a
 paljon on tehtävää jäljellä per aine.
 
 Uusipainike EditFragmentissa, jonka avulla voidaan poistaa kaikki data, jolloin käyttäjän ei tarvitse yksi kerrallaan poistaa dataa.
+
+![Etusivu](img/1.jpg)
