@@ -1,4 +1,4 @@
-lopumty-(Lopputyö)
+# lopumty-(Lopputyö)
 
 Nimi:
 
@@ -6,14 +6,14 @@ Ryhmä:TA42T23K
 
 Muistiinpano/Opiskelumuistio – Android-sovellus opiskelijalle
 
-Sovelluksen kuvaus
+## Sovelluksen kuvaus
 
 Opiskelumuistio on Android-sovellus, jonka avulla opiskelija voi tehdä, tallentaa ja hallita omia muistiinpanojaan ja tehtäviään. Sovellus on suunniteltu helpottamaan opiskelun organisointia ja muistettavien asioiden hallintaa.
 
 Sovellus on kehitetty Android Studiolla osana Projekti: Tekoäly/Mobiili - T42T187OJ-3003 kurssia.
 
 
-Käyttöohjeet
+## Käyttöohjeet
 
 1. Avaa sovellus – se luo automaattisesti tarvittavat tiedostot ja tietokannan.
 2. Etusivulla voit lisätä uusia merkintöjä (aine + tehtävä).
@@ -24,7 +24,7 @@ Käyttöohjeet
 5. Halutessasi voit poistaa koko tietokannan yhdellä painikkeella.
 
 
-Rakenne
+## Rakenne
 
 Sovelluksessa on kolme pääfragmenttia:
 
@@ -32,7 +32,7 @@ Sovelluksessa on kolme pääfragmenttia:
 - ViewFragment(Tietojenkatselu): Muistiinpanojen tarkasteluun
 - EditFragment(Tietojen tyhennys): Muistiinpajonen poistamiseen
 
-Ominaisuudet
+## Ominaisuudet
 
 -  Muistiinpanojen lisääminen  
   Käyttäjä voi syöttää aiheen ja tehtävän kuvauksen, jotka tallennetaan sovelluksen paikalliseen tietokantaan.
@@ -46,7 +46,7 @@ Ominaisuudet
 -  Navigointi
   Käyttöliittymässä on vasemmasta yläkulmasta avautuva valikko, josta pääsee eri näkymiin: Etusivu, katsele ja tyhjennys.
 
-Tekninen toteutus
+## Tekninen toteutus
 
 - IDE: Android Studio Meerkat Feature Drop | 2024.3.2  
 - Kieli: Kotlin (Java 17.0.15 -yhteensopiva) 
@@ -56,7 +56,7 @@ Tekninen toteutus
 - Minimi API-taso: 26 (Android 8.0)
 - Käyttöliittymä: XML-pohjainen layout-rakenne (fragmentit, napit, valikot)
 
-Asennusohjeet
+## Asennusohjeet
 
 1. Kloonaa projekti koneellesi githubista:
     ```bash
@@ -69,7 +69,7 @@ File > Open > valitse projektikansio
 Varmista, että käytössäsi on emulaattori tai Android-laite, jossa on API 26 (Android 8.0) tai uudempi.
 Klikkaa run ja sovellus hoitaa kaiken muun mitä se tarvitsee
 
-Päivitys: Ryhmitelty näkymä ja uusipainike 1.2 (vitsi että olisi parempi)
+## Päivitys: Ryhmitelty näkymä ja uusipainike
 Uudessa päivityksessä on muokattu ViewFragmenttia joten nyt se tiivistää ja näyttää käyttäjälle, kunka paljon hänellä on
 tehtävää yhdestä aineesta esim:
 Matematiikka: 3 tehtävää
@@ -80,4 +80,23 @@ paljon on tehtävää jäljellä per aine.
 
 Uusipainike EditFragmentissa, jonka avulla voidaan poistaa kaikki data, jolloin käyttäjän ei tarvitse yksi kerrallaan poistaa dataa.
 
+
+
+
+## kuvankaappaukset
+
+Etusivu
+
 ![Etusivu](img/1.jpg)
+
+Navigointi
+
+![Lisää merkintä](img/2.jpg)
+
+tietojen tiivistys
+
+![Katso merkinnät](img/3.jpg)
+
+Poista tietoja
+
+![Poista merkintöjä](img/4.jpg)
