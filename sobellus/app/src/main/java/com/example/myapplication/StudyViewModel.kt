@@ -33,4 +33,10 @@ class StudyViewModel(private val dao: StudyNoteDao) : ViewModel() {
             dao.deleteAll()
         }
     }
+    //delete all function
+    fun deleteAllNotes() {
+        viewModelScope.launch {
+            dao.deleteAll()
+        }
+    }
 }

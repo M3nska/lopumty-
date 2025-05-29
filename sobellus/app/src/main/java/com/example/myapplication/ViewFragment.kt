@@ -17,23 +17,23 @@ class ViewFragment : Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.fragment_view, container, false)
 
-        // Step 1: Get DAO from database instance
+        // creates viewmodel for factory and for dao
         val dao = AppDatabase.getInstance(requireContext()).studyNoteDao()
-
-        // Step 2: Create ViewModelFactory with DAO
         val factory = StudyViewModelFactory(dao)
 
-        // Step 3: Get ViewModel using factory
+
         val viewModel = ViewModelProvider(requireActivity(), factory).get(StudyViewModel::class.java)
 
-        // Step 4: Reference to TextView
+
         val notesTextView = view.findViewById<TextView>(R.id.saved_notes)
 
-        // Step 5: Observe LiveData from Room and update UI
+        // counts the data and then converts that data into a displayable text
         viewModel.studyNotes.observe(viewLifecycleOwner) { notes ->
-            val displayText = notes.joinToString("\n\n") {
-                "Aine: ${it.subject}\nTehtävä: ${it.activity}"
+            val grouped = notes.groupingBy { it.subject }.eachCount()
+            val displayText = grouped.entries.joinToString("\n") { (subject, count) ->
+                "$subject: $count tehtävä" + if (count > 1) "ä" else ""
             }
+            //adds text to textview
             notesTextView.text = displayText
         }
 

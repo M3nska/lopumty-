@@ -9,7 +9,8 @@
     android:padding="16dp"
     android:gravity="top"
     tools:context=".HomeFragment">
-
+    <!--Style for fragment home where there are 2 diffrent textview that save activity and subject.
+     Button here is for saving the app-->
     <TextView
         android:id="@+id/title_text"
         android:layout_width="wrap_content"

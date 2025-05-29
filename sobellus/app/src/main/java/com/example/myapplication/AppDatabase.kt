@@ -7,13 +7,12 @@ import androidx.room.RoomDatabase
 
 @Database(entities = [StudyNote::class], version = 1, exportSchema = false)
 abstract class AppDatabase : RoomDatabase() {
-
+    //function for getting dao
     abstract fun studyNoteDao(): StudyNoteDao
-    // jiha
+    // code for checking if there is a database if not then create else skip
     companion object {
         @Volatile
         private var INSTANCE: AppDatabase? = null
-
         fun getInstance(context: Context): AppDatabase {
             return INSTANCE ?: synchronized(this) {
                 val instance = Room.databaseBuilder(

@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
     android:background="@drawable/edittiback"
     >
-
+    <!--Edit fragment has a title button and a android recycler
+     that adds stuff from the database into the page-->
     <TextView
         android:id="@+id/headerText"
         android:layout_width="match_parent"
@@ -24,5 +25,16 @@
         android:layout_height="0dp"
         android:layout_weight="1"
         android:padding="8dp" />
+
+    <Button
+        android:id="@+id/buttonDeleteAll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Poista kaikki"
+        android:textColor="@android:color/white"
+        android:backgroundTint="@color/main"
+        android:layout_margin="16dp"
+        />
+
 
 </LinearLayout>

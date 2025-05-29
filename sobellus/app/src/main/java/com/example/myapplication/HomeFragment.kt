@@ -31,7 +31,7 @@ class HomeFragment : Fragment() {
         // Initialize the ViewModel with factory
         viewModel = ViewModelProvider(requireActivity(), factory)[StudyViewModel::class.java]
 
-        // Rest of your code...
+
         val inputActivity = view.findViewById<EditText>(R.id.input_activity)
         val inputSubject = view.findViewById<EditText>(R.id.input_subject)
         val buttonSubmit = view.findViewById<Button>(R.id.button_submit)

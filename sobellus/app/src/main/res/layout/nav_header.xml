@@ -7,7 +7,7 @@
     android:gravity="bottom"
     android:padding="16dp"
     android:theme="@style/ThemeOverlay.AppCompat.Dark">
-
+    <!--Code for the style of the navigation header-->
     <ImageView
         android:layout_width="116dp"
         android:layout_height="77dp"

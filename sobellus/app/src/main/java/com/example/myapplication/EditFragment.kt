@@ -30,12 +30,12 @@ class EditFragment : Fragment() {
         recyclerView = view.findViewById(R.id.recyclerViewNotes)
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
 
-        adapter = NotesAdapter { note -> // callback on note click
+        adapter = NotesAdapter { note ->
             confirmAndDelete(note)
         }
         recyclerView.adapter = adapter
 
-        // Initialize ViewModel (you'll need your ViewModelFactory with DAO)
+        // Initialize ViewModel
         val dao = AppDatabase.getInstance(requireContext()).studyNoteDao()
         val factory = StudyViewModelFactory(dao)
         viewModel = ViewModelProvider(this, factory)[StudyViewModel::class.java]
@@ -44,19 +44,39 @@ class EditFragment : Fragment() {
         viewModel.studyNotes.observe(viewLifecycleOwner) { notes ->
             adapter.submitList(notes)
         }
+        // Code for delebutton so it removes the selected file from database
+        val deleteAllButton = view.findViewById<View>(R.id.buttonDeleteAll)
+        deleteAllButton.setOnClickListener {
+            if (adapter.itemCount == 0) {
+                Toast.makeText(requireContext(), "Ei mitään poistettavaa", Toast.LENGTH_SHORT).show()
+            } else {
+                AlertDialog.Builder(requireContext())
+                    .setTitle("Poista kaikki")
+                    .setMessage("Haluatko varmasti poistaa kaikki merkinnät?")
+                    .setPositiveButton("Kyllä") { _, _ ->
+                        viewModel.deleteAllNotes()
+                        Toast.makeText(requireContext(), "Kaikki merkinnät poistettu", Toast.LENGTH_SHORT).show()
+                    }
+                    .setNegativeButton("Peruuta", null)
+                    .show()
+            }
+        }
+
 
         return view
     }
-
+    //Code for deleting everything from app
     private fun confirmAndDelete(note: StudyNote) {
         AlertDialog.Builder(requireContext())
             .setTitle("Opiskelunpoisto")
             .setMessage("Haluatko varmasti poistaa tämän tehtävän tai opiskelun?")
-            .setPositiveButton("Delete") { _, _ ->
+            .setPositiveButton("Poista") { _, _ ->
                 viewModel.deleteNote(note)
-                Toast.makeText(requireContext(), "Deleted", Toast.LENGTH_SHORT).show()
+                Toast.makeText(requireContext(), "Poistettu", Toast.LENGTH_SHORT).show()
             }
-            .setNegativeButton("Cancel", null)
+            .setNegativeButton("Peruuta", null)
             .show()
     }
+
+
 }
