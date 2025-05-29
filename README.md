@@ -87,7 +87,7 @@ Tietotekniikka 6 tehtävää
 Tämä on toteutettu käyttäen groupinBy ja LiveData kotlinissa ja tämä saa aikaan sen että on helpompi hahmottaa
 paljon on tehtävää jäljellä per aine.
 
-Uusipainike EditFragmentissa, jonka avulla voidaan poistaa kaikki data, jolloin käyttäjän ei tarvitse yksi kerrallaan poistaa dataa.
+Uusipainike EditFragmentissa, jonka avulla voidaan poistaa kaikki data, jolloin käyttäjän ei tarvitse yksi kerrallaan poistaa dataa. Toteutettu Dao `deleteAll()`-komennolla.
 
 
 
